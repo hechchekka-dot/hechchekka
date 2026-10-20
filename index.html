@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -293,6 +294,69 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .btn:hover { transform: none; }
 }
+
+/* Tarjetas de productos de afiliados */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 8px 24px #17251f08;
+}
+.product-visual {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e9eddf, #f7f7f1);
+  font-size: 4rem;
+  margin-bottom: 14px;
+}
+.product-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 4px 0 8px;
+}
+.product-card p {
+  color: var(--muted);
+  font-size: .94rem;
+  margin: 0 0 18px;
+}
+.product-card .product-button {
+  display: block;
+  margin-top: auto;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+}
+.product-card .product-button:hover {
+  background: #31463a;
+  text-decoration: none;
+}
+.product-disclosure {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: .85rem;
+}
+@media (max-width: 900px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 
@@ -306,6 +370,7 @@ a { color: inherit; }
     <a href="#calculadora">Herramienta</a>
     <a href="#habitos">Hábitos</a>
     <a href="#articulo-dinero">Artículos</a>
+    <a href="#productos">Productos</a>
   </nav>
 </header>
 
@@ -498,91 +563,11 @@ a { color: inherit; }
       </article>
 
       <article class="card">
-        <div class="tag">Estudio y trabajo</div>
+        <div class="tag">Compras inteligentes</div>
         <h3>5 accesorios económicos para organizar tu escritorio</h3>
         <p>Ideas prácticas para elegir accesorios útiles sin gastar más de lo necesario.</p>
         <a href="mejores-accesorios-escritorio.html">Leer la guía →</a>
-     <p>
-  <a href="https://link.amazon/B05WY7dSY"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver producto en Amazon →
-    
-<p>
-  <a href="https://link.amazon/B0b1bqDPj"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver auriculares inalámbricos en Amazon →
-  </a>
-</p>
-
-<p>
-  <a href="https://link.amazon/B087NHAX6"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver cargador USB-C en Amazon →
-  </a>
-</p>
-
-<p>
-  <a href="https://link.amazon/B08HnP5RY"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver hub USB en Amazon →
-  </a>
-</p>
-
-<p>
-  <a href="https://link.amazon/B07oxqpGj"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver alfombrilla de escritorio en Amazon →
-  </a>
-</p>
-
-<p>
-  <a href="https://link.amazon/B01JB9Lcx"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver soporte para móvil en Amazon →
-  </a>
-</p>
-
-<p>
-  <a href="https://link.amazon/B0bAgCMAG"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver organizador de escritorio en Amazon →
-  </a>
-</p>
-
-    
-<p>
-  <a href="https://link.amazon/B0amYKgfK"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver organizador de cables en Amazon →
-    
-<p>
-  <a href="https://link.amazon/B09i9Nlqu"
-     target="_blank"
-     rel="sponsored noopener">
-    Ver lámpara LED en Amazon →
-  </a>
-</p>
-
-  </a>
-</p>
-
-  </a>
-</p>
-<p>
-  <small>
-    Enlace de afiliado: puedo recibir una comisión
-    si compras a través de este enlace, sin coste
-    adicional para ti.
-  </small>
-</p> </article>
+      </article>
 
       <article class="card">
         <div class="tag">Estudio y trabajo</div>
@@ -606,6 +591,83 @@ a { color: inherit; }
       </article>
     </div>
   </section>
+
+
+  <section class="wrap section" id="productos">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selección de productos</div>
+        <h2>Accesorios útiles para tu escritorio</h2>
+      </div>
+      <p>Ideas para estudiar y trabajar con un espacio más cómodo y organizado. Comprueba las características en Amazon antes de comprar.</p>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de accesorio de escritorio">✨</div>
+        <h3>Accesorio de escritorio</h3>
+        <p>Una idea práctica para completar tu espacio de estudio o trabajo.</p>
+        <a class="product-button" href="https://link.amazon/B05WY7dSY" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de auriculares inalámbricos">🎧</div>
+        <h3>Auriculares inalámbricos</h3>
+        <p>Comprueba la autonomía, la comodidad y la compatibilidad antes de elegir.</p>
+        <a class="product-button" href="https://link.amazon/B0b1bqDPj" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de cargador usb-c">🔌</div>
+        <h3>Cargador USB-C</h3>
+        <p>Revisa la potencia y que sea compatible con tu dispositivo.</p>
+        <a class="product-button" href="https://link.amazon/B087NHAX6" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de hub usb">🖥️</div>
+        <h3>Hub USB</h3>
+        <p>Puede ayudarte a conectar varios dispositivos compatibles al ordenador.</p>
+        <a class="product-button" href="https://link.amazon/B08HnP5RY" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de alfombrilla de escritorio">🖱️</div>
+        <h3>Alfombrilla de escritorio</h3>
+        <p>Una superficie para colocar el ratón y organizar mejor la mesa.</p>
+        <a class="product-button" href="https://link.amazon/B07oxqpGj" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de soporte para móvil">📱</div>
+        <h3>Soporte para móvil</h3>
+        <p>Mantén el teléfono apoyado en una posición cómoda sobre la mesa.</p>
+        <a class="product-button" href="https://link.amazon/B01JB9Lcx" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de organizador de escritorio">✏️</div>
+        <h3>Organizador de escritorio</h3>
+        <p>Guarda bolígrafos y pequeños accesorios para tenerlos a mano.</p>
+        <a class="product-button" href="https://link.amazon/B0bAgCMAG" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de organizador de cables">🧷</div>
+        <h3>Organizador de cables</h3>
+        <p>Ayuda a mantener los cables recogidos y el escritorio más ordenado.</p>
+        <a class="product-button" href="https://link.amazon/B0amYKgfK" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual" role="img" aria-label="Ilustración de lámpara led">💡</div>
+        <h3>Lámpara LED</h3>
+        <p>Una opción para iluminar tu zona de estudio o trabajo.</p>
+        <a class="product-button" href="https://link.amazon/B09i9Nlqu" target="_blank" rel="sponsored noopener">Ver en Amazon →</a>
+      </article>
+    </div>
+    <p class="product-disclosure">Enlaces de afiliado: como asociado de Amazon, puedo obtener ingresos por las compras que cumplan los requisitos, sin coste adicional para ti.</p>
+  </section>
+
 </main>
 
 <p class="aviso-afiliados">
