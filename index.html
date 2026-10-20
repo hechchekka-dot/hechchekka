@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +19,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -321,7 +320,6 @@ a:focus-visible,
 }
 
 .tip b { font-size: 1.1rem; }
-
 .tip p { color: var(--muted); }
 
 .aviso-afiliados {
@@ -365,7 +363,6 @@ a:focus-visible,
   }
 
   .hero-art { min-height: 270px; }
-
   .cards { grid-template-columns: 1fr; }
 
   .section-head {
@@ -379,10 +376,8 @@ a:focus-visible,
   }
 
   .tips { grid-template-columns: 1fr; }
-
   .footer { flex-direction: column; }
-
-  .hero h1 { font-size: 3.5rem; }
+  .hero h1 { font-size: clamp(2.8rem, 12vw, 3.5rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -396,7 +391,7 @@ a:focus-visible,
 
 <header class="wrap nav">
   <a class="logo" href="index.html" style="text-decoration:none">
-    <span>+</span>empieza fácil
+    <span aria-hidden="true">+</span>empieza fácil
   </a>
 
   <nav class="navlinks" aria-label="Navegación principal">
@@ -611,15 +606,18 @@ a:focus-visible,
         <a href="como-elegir-silla-estudiar.html">Leer la guía →</a>
       </article>
 
-      <!-- Nueva guía: primer trabajo -->
       <article class="card">
         <div class="tag">Empleo y formación</div>
         <h3>Cómo encontrar tu primer trabajo sin experiencia</h3>
-        <p>
-          Aprende a preparar tu currículum, buscar ofertas adecuadas
-          y afrontar tu primera entrevista.
-        </p>
+        <p>Aprende a preparar tu currículum, buscar ofertas adecuadas y afrontar tu primera entrevista.</p>
         <a href="como-encontrar-primer-trabajo.html">Leer la guía →</a>
+      </article>
+
+      <article class="card">
+        <div class="tag">Empleo y formación</div>
+        <h3>Cómo preparar una entrevista de trabajo</h3>
+        <p>Practica respuestas, conoce la empresa y descubre cómo prepararte para tu próxima entrevista.</p>
+        <a href="como-preparar-entrevista-trabajo.html">Leer la guía →</a>
       </article>
     </div>
   </section>
@@ -652,27 +650,41 @@ function euro(n) {
 }
 
 function update() {
-  const values = fields.map(id => {
-    const input = document.getElementById(id);
-    const value = Number(input.value);
+  const inputs = fields.map(id => document.getElementById(id));
 
-    if (input.value.trim() === '' || !Number.isFinite(value)) {
-      return 0;
-    }
+  const invalid = inputs.some(input =>
+    input.value.trim() === '' ||
+    !Number.isFinite(Number(input.value)) ||
+    Number(input.value) < 0
+  );
 
-    return Math.max(0, value);
-  });
+  const mensaje = document.getElementById('mensaje');
+  const restante = document.getElementById('restante');
 
-  const left = values[0] - values[1] - values[2];
+  if (invalid) {
+    restante.textContent = '—';
+    mensaje.textContent =
+      'Introduce cantidades válidas iguales o superiores a cero en los tres campos.';
+    return;
+  }
 
-  document.getElementById('restante').textContent = euro(left);
+  const [ingresos, fijos, variables] =
+    inputs.map(input => Number(input.value));
 
-  document.getElementById('mensaje').textContent =
-    left < 0
-      ? 'Tus gastos superan los ingresos indicados. Revisa las cantidades y busca qué puedes ajustar con seguridad.'
-      : left === 0
-        ? 'Has asignado todos tus ingresos. Comprueba si hay gastos ocasionales que falten.'
-        : 'Este es el margen antes de gastos no incluidos o imprevistos.';
+  const left = ingresos - fijos - variables;
+
+  restante.textContent = euro(left);
+
+  if (left < 0) {
+    mensaje.textContent =
+      'Tus gastos superan los ingresos indicados. Revisa las cantidades y busca qué puedes ajustar sin descuidar tus necesidades básicas.';
+  } else if (left === 0) {
+    mensaje.textContent =
+      'Has asignado todos tus ingresos. Comprueba si faltan gastos ocasionales o imprevistos.';
+  } else {
+    mensaje.textContent =
+      'Este es el margen antes de gastos no incluidos o imprevistos.';
+  }
 }
 
 fields.forEach(id => {
@@ -684,3 +696,4 @@ update();
 
 </body>
 </html>
+```
