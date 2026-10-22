@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,13 +19,9 @@
       --borde: #dce3d8;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -34,9 +31,7 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     .contenedor {
       width: min(100% - 32px, 1050px);
@@ -69,14 +64,9 @@
       color: var(--suave);
     }
 
-    .volver:hover,
-    .enlace:hover {
-      text-decoration: underline;
-    }
+    .volver:hover, .enlace:hover { text-decoration: underline; }
 
-    main {
-      padding: 42px 0 56px;
-    }
+    main { padding: 42px 0 56px; }
 
     .etiqueta {
       color: #496b37;
@@ -108,9 +98,7 @@
       margin: 0 0 10px;
     }
 
-    p {
-      margin: 0 0 15px;
-    }
+    p { margin: 0 0 15px; }
 
     .introduccion {
       max-width: 760px;
@@ -128,9 +116,7 @@
       font-size: 14px;
     }
 
-    .seccion-titulo {
-      margin: 40px 0 18px;
-    }
+    .seccion-titulo { margin: 40px 0 18px; }
 
     .rejilla {
       display: grid;
@@ -181,9 +167,7 @@
       flex-direction: column;
     }
 
-    .contenido-tarjeta h3 {
-      font-size: 21px;
-    }
+    .contenido-tarjeta h3 { font-size: 21px; }
 
     .contenido-tarjeta p {
       color: #58665b;
@@ -196,9 +180,7 @@
       font-size: 14px;
     }
 
-    .lista li {
-      margin: 5px 0;
-    }
+    .lista li { margin: 5px 0; }
 
     .para-quien {
       background: #f7f8f2;
@@ -245,9 +227,7 @@
       border-radius: 14px;
     }
 
-    .consejo ul {
-      padding-left: 21px;
-    }
+    .consejo ul { padding-left: 21px; }
 
     .pasos {
       display: grid;
@@ -283,9 +263,7 @@
       border-radius: 14px;
     }
 
-    .final h2 {
-      margin-bottom: 10px;
-    }
+    .final h2 { margin-bottom: 10px; }
 
     .enlace-final {
       display: inline-block;
@@ -310,65 +288,22 @@
       margin-top: 15px;
     }
 
-    .pie-enlaces a {
-      color: var(--oscuro);
-    }
+    .pie-enlaces a { color: var(--oscuro); }
 
     @media (max-width: 650px) {
-      .contenedor {
-        width: min(100% - 24px, 520px);
-      }
-
-      .barra {
-        min-height: 58px;
-      }
-
-      .marca {
-        font-size: 15px;
-      }
-
-      .volver {
-        font-size: 11px;
-        text-align: right;
-      }
-
-      main {
-        padding-top: 28px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .introduccion {
-        font-size: 15px;
-      }
-
-      .rejilla {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .imagen-producto {
-        height: 230px;
-      }
-
-      .contenido-tarjeta {
-        padding: 18px;
-      }
-
-      .pasos {
-        grid-template-columns: 1fr;
-      }
-
-      .consejo,
-      .final {
-        padding: 19px;
-      }
-
-      .boton-amazon {
-        padding: 15px;
-      }
+      .contenedor { width: min(100% - 24px, 520px); }
+      .barra { min-height: 58px; }
+      .marca { font-size: 15px; }
+      .volver { font-size: 11px; text-align: right; }
+      main { padding-top: 28px; }
+      h1 { font-size: 32px; }
+      .introduccion { font-size: 15px; }
+      .rejilla { grid-template-columns: 1fr; gap: 18px; }
+      .imagen-producto { height: 230px; }
+      .contenido-tarjeta { padding: 18px; }
+      .pasos { grid-template-columns: 1fr; }
+      .consejo, .final { padding: 19px; }
+      .boton-amazon { padding: 15px; }
     }
   </style>
 </head>
@@ -385,18 +320,15 @@
     <section>
       <span class="etiqueta">Estudio y trabajo</span>
       <h1>4 accesorios útiles para estudiar y trabajar desde casa</h1>
-
       <p class="introduccion">
         Organizar tu espacio no significa gastar mucho dinero. Algunos
         accesorios pueden ayudarte a tener la mesa más ordenada y hacer
         más cómodas tus tareas diarias.
       </p>
-
       <p>
         Aquí encontrarás cuatro ideas, consejos para elegir y algunas cosas
         que conviene comprobar antes de comprar.
       </p>
-
       <div class="aviso">
         <strong>Antes de comprar:</strong> revisa las características, la
         compatibilidad, el precio actualizado y las opiniones recientes.
@@ -414,162 +346,86 @@
 
       <div class="rejilla">
 
-        <!-- PRODUCTO 1: LÁMPARA LED -->
         <article class="tarjeta">
           <div class="imagen-producto">
-            <img
-              src="https://m.media-amazon.com/images/P/B0FCS4D8P1.01._SCLZZZZZZZ_SL500_.jpg"
-              alt="Imagen de una lámpara LED de escritorio"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <img src="lampara.jpg" alt="Lámpara LED de escritorio" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
             <div class="alternativa" aria-hidden="true">💡</div>
           </div>
-
           <div class="contenido-tarjeta">
             <span class="etiqueta">01 · Iluminación</span>
             <h3>Una lámpara LED para el escritorio</h3>
-            <p>
-              Puede ayudarte a iluminar tus apuntes y tu zona de trabajo
-              cuando la luz natural no es suficiente.
-            </p>
-
+            <p>Puede ayudarte a iluminar tus apuntes y tu zona de trabajo cuando la luz natural no es suficiente.</p>
             <ul class="lista">
               <li>Comprueba si puedes orientar la luz.</li>
               <li>Elige un tamaño adecuado para tu mesa.</li>
               <li>Busca una iluminación cómoda para tus tareas.</li>
             </ul>
-
-            <div class="para-quien">
-              <strong>Puede ser útil para:</strong> estudiar por la tarde,
-              leer o trabajar con documentos en papel.
-            </div>
-
-            <a class="boton-amazon"
-               href="https://www.amazon.es/dp/B0FCS4D8P1?tag=empiezafacilw-21"
-               target="_blank"
-               rel="sponsored noopener noreferrer">
-              Ver lámpara LED en Amazon →
-            </a>
+            <div class="para-quien"><strong>Puede ser útil para:</strong> estudiar por la tarde, leer o trabajar con documentos en papel.</div>
+            <a class="boton-amazon" href="https://www.amazon.es/dp/B0FCS4D8P1?tag=empiezafacilw-21" target="_blank" rel="sponsored noopener noreferrer">Ver lámpara LED en Amazon →</a>
             <p class="nota-precio">Consulta el precio y las características actuales en Amazon.</p>
           </div>
         </article>
 
-        <!-- PRODUCTO 2: AURICULARES -->
         <article class="tarjeta">
           <div class="imagen-producto">
-            <img
-              src="https://m.media-amazon.com/images/P/B0HD62ZM4M.01._SCLZZZZZZZ_SL500_.jpg"
-              alt="Imagen de auriculares para estudiar y hacer reuniones"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <img src="auriculares.jpg" alt="Auriculares para estudiar y hacer reuniones" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
             <div class="alternativa" aria-hidden="true">🎧</div>
           </div>
-
           <div class="contenido-tarjeta">
             <span class="etiqueta">02 · Audio</span>
             <h3>Auriculares para clases y reuniones</h3>
-            <p>
-              Una opción práctica para escuchar clases online, participar
-              en reuniones o seguir explicaciones desde el ordenador.
-            </p>
-
+            <p>Una opción práctica para escuchar clases online, participar en reuniones o seguir explicaciones desde el ordenador.</p>
             <ul class="lista">
               <li>Decide si prefieres cable o conexión inalámbrica.</li>
               <li>Comprueba la comodidad y la autonomía.</li>
               <li>Verifica la compatibilidad con tus dispositivos.</li>
             </ul>
-
-            <div class="para-quien">
-              <strong>Consejo:</strong> si solo los necesitas para estudiar,
-              compara también modelos sencillos.
-            </div>
-
-            <a class="boton-amazon"
-               href="https://www.amazon.es/dp/B0HD62ZM4M?tag=empiezafacilw-21"
-               target="_blank"
-               rel="sponsored noopener noreferrer">
-              Ver auriculares en Amazon →
-            </a>
+            <div class="para-quien"><strong>Consejo:</strong> si solo los necesitas para estudiar, compara también modelos sencillos.</div>
+            <a class="boton-amazon" href="https://www.amazon.es/dp/B0HD62ZM4M?tag=empiezafacilw-21" target="_blank" rel="sponsored noopener noreferrer">Ver auriculares en Amazon →</a>
             <p class="nota-precio">Comprueba las conexiones y las funciones del modelo.</p>
           </div>
         </article>
 
-        <!-- PRODUCTO 3: HUB USB -->
         <article class="tarjeta">
           <div class="imagen-producto">
-            <img
-              src="https://m.media-amazon.com/images/P/B0GVDRR599.01._SCLZZZZZZZ_SL500_.jpg"
-              alt="Imagen de un hub USB para conectar dispositivos"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <img src="hub-usb.jpg" alt="Hub USB para conectar dispositivos" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
             <div class="alternativa" aria-hidden="true">🔌</div>
           </div>
-
           <div class="contenido-tarjeta">
             <span class="etiqueta">03 · Conexiones</span>
             <h3>Un hub USB para conectar dispositivos</h3>
-            <p>
-              Puede permitirte conectar varios accesorios cuando tu
-              ordenador tiene pocos puertos disponibles.
-            </p>
-
+            <p>Puede permitirte conectar varios accesorios cuando tu ordenador tiene pocos puertos disponibles.</p>
             <ul class="lista">
               <li>Comprueba si necesitas USB-A, USB-C u otra conexión.</li>
               <li>Cuenta cuántos puertos necesitas.</li>
               <li>Revisa las funciones que ofrece cada puerto.</li>
             </ul>
-
-            <div class="para-quien">
-              <strong>Puede ser útil para:</strong> conectar un ratón,
-              un teclado o una memoria USB cuando te faltan puertos.
-            </div>
-
-            <a class="boton-amazon"
-               href="https://www.amazon.es/dp/B0GVDRR599?tag=empiezafacilw-21"
-               target="_blank"
-               rel="sponsored noopener noreferrer">
-              Ver hub USB en Amazon →
-            </a>
+            <div class="para-quien"><strong>Puede ser útil para:</strong> conectar un ratón, un teclado o una memoria USB cuando te faltan puertos.</div>
+            <a class="boton-amazon" href="https://www.amazon.es/dp/B0GVDRR599?tag=empiezafacilw-21" target="_blank" rel="sponsored noopener noreferrer">Ver hub USB en Amazon →</a>
             <p class="nota-precio">Verifica el tipo de conexión antes de comprar.</p>
           </div>
         </article>
 
-        <!-- PRODUCTO 4: ORGANIZADOR DE CABLES -->
         <article class="tarjeta">
           <div class="imagen-producto">
-            <img
-              src="https://m.media-amazon.com/images/P/B0GTRXBJCR.01._SCLZZZZZZZ_SL500_.jpg"
-              alt="Imagen de un organizador de cables para escritorio"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <img src="organizador.jpg" alt="Organizador de cables para escritorio" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
             <div class="alternativa" aria-hidden="true">🧷</div>
           </div>
-
           <div class="contenido-tarjeta">
             <span class="etiqueta">04 · Organización</span>
             <h3>Un organizador de cables</h3>
-            <p>
-              Ayuda a mantener recogidos los cables del cargador,
-              del ordenador y de otros accesorios.
-            </p>
-
+            <p>Ayuda a mantener recogidos los cables del cargador, del ordenador y de otros accesorios.</p>
             <ul class="lista">
               <li>Comprueba el grosor de los cables.</li>
               <li>Revisa cuántos cables puedes organizar.</li>
               <li>Elige entre fijarlo a la mesa o agruparlos.</li>
             </ul>
-
-            <div class="para-quien">
-              <strong>Consejo:</strong> organiza primero los cables que
-              utilizas a diario. Quizá no necesites comprar nada.
-            </div>
-
-            <a class="boton-amazon"
-               href="https://www.amazon.es/dp/B0GTRXBJCR?tag=empiezafacilw-21"
-               target="_blank"
-               rel="sponsored noopener noreferrer">
-              Ver organizador en Amazon →
-            </a>
+            <div class="para-quien"><strong>Consejo:</strong> organiza primero los cables que utilizas a diario. Quizá no necesites comprar nada.</div>
+            <a class="boton-amazon" href="https://www.amazon.es/dp/B0GTRXBJCR?tag=empiezafacilw-21" target="_blank" rel="sponsored noopener noreferrer">Ver organizador en Amazon →</a>
             <p class="nota-precio">Compara el tamaño y el sistema de fijación.</p>
           </div>
         </article>
@@ -581,20 +437,17 @@
       <span class="etiqueta">Antes de decidir</span>
       <h2>¿Qué accesorio deberías comprar primero?</h2>
       <p>Empieza por el problema que quieras resolver, no por el producto más llamativo.</p>
-
       <div class="pasos">
         <div class="paso">
           <span class="numero">1</span>
           <h3>Poca luz</h3>
           Compara lámparas de escritorio y revisa cómo iluminan la zona de trabajo.
         </div>
-
         <div class="paso">
           <span class="numero">2</span>
           <h3>Clases online</h3>
           Busca auriculares cómodos y compatibles con tu ordenador o teléfono.
         </div>
-
         <div class="paso">
           <span class="numero">3</span>
           <h3>Mesa desordenada</h3>
@@ -621,9 +474,7 @@
         trabajar mejor. Compara las opciones, fija un presupuesto y compra
         solo si el producto merece la pena para ti.
       </p>
-      <a class="enlace-final" href="index.html">
-        Descubre más guías en Empieza Fácil →
-      </a>
+      <a class="enlace-final" href="index.html">Descubre más guías en Empieza Fácil →</a>
     </section>
   </main>
 
@@ -634,18 +485,15 @@
         obtengo ingresos por las compras adscritas que cumplen los requisitos
         aplicables. Esto no supone un coste adicional para el comprador.
       </p>
-
       <p>
         Los precios, la disponibilidad y las características pueden cambiar.
         Comprueba la información actual en la página del vendedor.
       </p>
-
       <nav class="pie-enlaces" aria-label="Enlaces del pie de página">
         <a href="index.html">Inicio</a>
         <a href="privacidad.html">Política de privacidad</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-
       <p>© 2026 Empieza Fácil</p>
     </div>
   </footer>
