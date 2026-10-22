@@ -3,56 +3,541 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Accesorios prácticos para estudiar y trabajar desde casa con más comodidad y organización.">
-  <title>Accesorios para estudiar y trabajar desde casa | Empieza Fácil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Descubre cuatro accesorios útiles para estudiar y trabajar desde casa. Consejos para elegir una lámpara LED, auriculares, un hub USB y un organizador de cables.">
+
+  <meta name="theme-color" content="#f7f7f1">
+
+  <title>4 accesorios útiles para estudiar y trabajar | Empieza Fácil</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
+    :root {
+      --ink: #17251f;
+      --muted: #64736c;
+      --paper: #f7f7f1;
+      --green: #b9f36a;
+      --line: #dfe5dc;
+      --white: #fff;
     }
-    a { color: #0759b8; }
-    h1, h2 { line-height: 1.3; }
-    .aviso { background: #f2f2f2; padding: 12px; border-radius: 8px; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(960px, 92%);
+      margin: auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .logo span {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-right: 7px;
+      background: var(--green);
+      border-radius: 9px;
+    }
+
+    .back-link {
+      font-size: .92rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .eyebrow {
+      color: #48643a;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      max-width: 750px;
+      margin: 12px 0 18px;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      line-height: 1.08;
+    }
+
+    h2 {
+      margin-top: 38px;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .notice {
+      margin: 22px 0;
+      padding: 15px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+      font-size: .9rem;
+    }
+
+    .intro-box {
+      margin: 28px 0;
+      padding: 22px;
+      border-radius: 18px;
+      background: #e9eddf;
+    }
+
+    .intro-box p {
+      margin-bottom: 0;
+    }
+
+    .products-title {
+      margin-top: 48px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin: 24px 0 35px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: 0 7px 22px #17251f08;
+    }
+
+    .product-visual {
+      display: grid;
+      place-items: center;
+      min-height: 145px;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e9eddf, #f7f7f1);
+      font-size: 4rem;
+    }
+
+    .product-card h3 {
+      margin: 5px 0 10px;
+    }
+
+    .product-card p {
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+
+    .product-card ul {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .product-card li {
+      margin-bottom: 6px;
+    }
+
+    .product-button {
+      display: block;
+      margin-top: auto;
+      padding: 13px 16px;
+      border-radius: 11px;
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .product-button:hover {
+      background: #31463a;
+    }
+
+    .product-button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #48643a;
+      outline-offset: 3px;
+    }
+
+    .tip-box {
+      margin: 30px 0;
+      padding: 22px;
+      border-left: 5px solid var(--green);
+      border-radius: 10px;
+      background: var(--white);
+    }
+
+    .tip-box h2 {
+      margin-top: 0;
+    }
+
+    .checklist {
+      padding-left: 22px;
+    }
+
+    .checklist li {
+      margin-bottom: 10px;
+    }
+
+    .conclusion {
+      margin: 38px 0;
+      padding: 25px;
+      border-radius: 20px;
+      background: var(--green);
+    }
+
+    .conclusion h2 {
+      margin-top: 0;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 45px;
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .disclosure {
+      margin: 25px auto;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <p><a href="index.html">← Volver a Empieza Fácil</a></p>
 
-  <h1>Accesorios útiles para estudiar y trabajar desde casa</h1>
+  <header class="wrap nav">
+    <a class="logo" href="index.html">
+      <span aria-hidden="true">+</span>Empieza Fácil
+    </a>
 
-  <p>Estudiar o trabajar desde casa puede ser más cómodo si tienes un espacio ordenado y los accesorios adecuados. No hace falta comprar muchas cosas: lo importante es elegir lo que realmente necesitas.</p>
+    <a class="back-link" href="index.html">
+      ← Volver a la página principal
+    </a>
+  </header>
 
-  <h2>1. Una lámpara de escritorio</h2>
-  <p>Una buena lámpara permite iluminar la zona de trabajo cuando la luz natural no es suficiente. Busca una que puedas orientar fácilmente y que no produzca reflejos molestos en la pantalla.</p>
+  <main class="wrap">
 
-  <h2>2. Un soporte para portátil</h2>
-  <p>Un soporte puede ayudarte a colocar la pantalla a una altura más cómoda. Antes de comprarlo, comprueba las dimensiones de tu portátil y si necesitas un teclado y un ratón externos.</p>
+    <article>
 
-  <h2>3. Un ratón y un teclado</h2>
-  <p>Si utilizas el ordenador muchas horas, un teclado y un ratón externos pueden hacer que tu espacio resulte más práctico. Compara las conexiones, el tamaño y la comodidad antes de elegir.</p>
+      <header class="hero">
+        <div class="eyebrow">Estudio y trabajo</div>
 
-  <h2>4. Auriculares para concentrarte</h2>
-  <p>Los auriculares pueden ser útiles para escuchar clases, reuniones o explicaciones sin molestar a otras personas. Piensa si los necesitas con cable o inalámbricos y revisa la duración de la batería si eliges estos últimos.</p>
+        <h1>4 accesorios útiles para estudiar y trabajar desde casa</h1>
 
-  <h2>5. Una regleta con suficientes enchufes</h2>
-  <p>Una regleta puede ayudar a organizar los cables de varios dispositivos. Comprueba la potencia máxima admitida y no conectes aparatos que superen sus límites. Evita sobrecargar enchufes y revisa que el producto cumpla las normas de seguridad aplicables.</p>
+        <p class="lead">
+          Organizar tu espacio no significa gastar mucho dinero.
+          Algunos accesorios pueden ayudarte a tener la mesa más
+          ordenada y hacer más cómodas tus tareas diarias.
+        </p>
 
-  <h2>6. Un organizador de escritorio</h2>
-  <p>Una caja, una bandeja o un organizador sencillo puede servir para guardar bolígrafos, cables y pequeños accesorios. Incluso puedes reutilizar cosas que ya tienes en casa antes de gastar dinero.</p>
+        <p>
+          En esta guía encontrarás cuatro ideas, qué debes tener en
+          cuenta antes de comprar y cómo decidir si realmente necesitas
+          cada producto.
+        </p>
+      </header>
 
-  <h2>¿Qué deberías comprar primero?</h2>
-  <p>Haz una lista de lo que te falta y establece un presupuesto. Empieza por el accesorio que vaya a resolver un problema real. Compara precios, medidas, opiniones y condiciones de devolución, y no compres algo solo porque esté de moda.</p>
+      <aside class="notice">
+        <strong>Antes de comprar:</strong>
+        comprueba las características, la compatibilidad, el precio
+        actualizado y las opiniones recientes del producto.
+        No necesitas comprar los cuatro accesorios: elige solo los
+        que te resulten útiles.
+      </aside>
 
-  <h2>Conclusión</h2>
-  <p>Un espacio de estudio funcional no tiene por qué ser caro. Una buena iluminación, una organización sencilla y los accesorios adecuados para tus necesidades pueden ser suficientes para empezar.</p>
+      <section>
+        <h2>1. Una lámpara LED para el escritorio</h2>
 
-  <p class="aviso">Como Afiliado de Amazon, gano por las compras elegibles.</p>
+        <p>
+          Si estudias por la tarde o trabajas en una habitación con
+          poca luz, una lámpara de escritorio puede ayudarte a iluminar
+          mejor tus apuntes y tu zona de trabajo.
+        </p>
 
-  <p><a href="index.html">Volver a la página principal</a> | <a href="privacidad.html">Política de privacidad</a> | <a href="contacto.html">Contacto</a></p>
+        <p>Antes de elegir una, fíjate en estos puntos:</p>
+
+        <ul class="checklist">
+          <li>Que puedas orientar la luz hacia la zona que necesitas.</li>
+          <li>Que tenga un tamaño adecuado para tu escritorio.</li>
+          <li>Que la iluminación no produzca reflejos molestos en la pantalla.</li>
+          <li>Que el cable o la conexión sean adecuados para tu espacio.</li>
+        </ul>
+
+        <p>
+          <strong>¿Para quién puede ser útil?</strong>
+          Para quien estudia con apuntes, lee o trabaja cuando la luz
+          natural no es suficiente.
+        </p>
+
+        <p>
+          <a href="https://www.amazon.es/dp/B0FCS4D8P1?tag=empiezafacilw-21"
+             target="_blank"
+             rel="sponsored noopener noreferrer">
+            Consultar lámparas LED en Amazon →
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Auriculares para clases y reuniones</h2>
+
+        <p>
+          Los auriculares pueden resultar prácticos para escuchar
+          clases online, participar en reuniones o seguir explicaciones
+          sin utilizar los altavoces del ordenador.
+        </p>
+
+        <p>Antes de comprar, compara:</p>
+
+        <ul class="checklist">
+          <li>Si los prefieres con cable o inalámbricos.</li>
+          <li>La comodidad para utilizarlos durante tus tareas.</li>
+          <li>La autonomía de la batería, si son inalámbricos.</li>
+          <li>La compatibilidad con tu ordenador o teléfono.</li>
+        </ul>
+
+        <p>
+          <strong>Consejo:</strong>
+          si solo los necesitas para estudiar en casa, compara también
+          modelos sencillos. No siempre necesitas las funciones más caras.
+        </p>
+
+        <p>
+          <a href="https://www.amazon.es/dp/B0HD62ZM4M?tag=empiezafacilw-21"
+             target="_blank"
+             rel="sponsored noopener noreferrer">
+            Consultar auriculares en Amazon →
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Un hub USB para conectar dispositivos</h2>
+
+        <p>
+          Si tu ordenador tiene pocos puertos, un hub USB puede servir
+          para conectar varios accesorios compatibles, como una memoria
+          USB, un ratón o un teclado.
+        </p>
+
+        <p>Comprueba lo siguiente antes de elegir:</p>
+
+        <ul class="checklist">
+          <li>Qué conexión utiliza tu ordenador: USB-A, USB-C u otra.</li>
+          <li>Cuántos puertos necesitas realmente.</li>
+          <li>Si los puertos ofrecen las funciones que buscas.</li>
+          <li>Si necesitas conectar dispositivos que consumen más energía.</li>
+        </ul>
+
+        <p>
+          <strong>¿Cuándo merece la pena?</strong>
+          Cuando conectas varios dispositivos y te faltan puertos.
+          Si tu ordenador ya tiene suficientes, quizá no necesites comprar uno.
+        </p>
+
+        <p>
+          <a href="https://www.amazon.es/dp/B0GVDRR599?tag=empiezafacilw-21"
+             target="_blank"
+             rel="sponsored noopener noreferrer">
+            Consultar hub USB en Amazon →
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Un organizador de cables</h2>
+
+        <p>
+          Los cables del cargador, el ordenador, los auriculares y
+          otros accesorios pueden acabar mezclados encima de la mesa.
+          Un organizador sencillo ayuda a mantenerlos recogidos.
+        </p>
+
+        <p>Para elegir uno, revisa:</p>
+
+        <ul class="checklist">
+          <li>El número de cables que quieres ordenar.</li>
+          <li>El grosor de los cables y el tamaño de las ranuras.</li>
+          <li>Si se fija a la mesa o simplemente mantiene los cables juntos.</li>
+          <li>Si puedes reutilizar una caja o una solución que ya tengas.</li>
+        </ul>
+
+        <p>
+          <strong>Consejo:</strong>
+          organiza primero los cables que utilizas todos los días.
+          Puede que con eso ya notes una diferencia sin gastar dinero.
+        </p>
+
+        <p>
+          <a href="https://www.amazon.es/dp/B0GTRXBJCR?tag=empiezafacilw-21"
+             target="_blank"
+             rel="sponsored noopener noreferrer">
+            Consultar organizadores de cables en Amazon →
+          </a>
+        </p>
+      </section>
+
+      <section class="tip-box">
+        <h2>¿Qué accesorio deberías comprar primero?</h2>
+
+        <p>
+          La mejor elección depende del problema que quieras resolver.
+          Utiliza esta pequeña guía antes de gastar dinero:
+        </p>
+
+        <ul class="checklist">
+          <li><strong>Poca luz:</strong> compara lámparas de escritorio.</li>
+          <li><strong>Clases y reuniones:</strong> busca auriculares compatibles.</li>
+          <li><strong>Faltan puertos:</strong> comprueba si necesitas un hub USB.</li>
+          <li><strong>Mesa desordenada:</strong> prueba primero a organizar los cables que ya tienes.</li>
+        </ul>
+
+        <p>
+          Fija un presupuesto, compara varias opciones y no compres
+          un accesorio solo porque aparezca recomendado en una página.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cómo comparar productos antes de comprar</h2>
+
+        <p>
+          El precio no es el único factor importante. Para evitar
+          compras innecesarias, revisa estos cinco puntos:
+        </p>
+
+        <ol class="checklist">
+          <li><strong>Compatibilidad:</strong> comprueba que funcione con tus dispositivos.</li>
+          <li><strong>Características:</strong> compara las funciones que realmente necesitas.</li>
+          <li><strong>Opiniones:</strong> lee comentarios recientes y busca problemas repetidos.</li>
+          <li><strong>Precio final:</strong> revisa los gastos de envío y las condiciones de compra.</li>
+          <li><strong>Devoluciones:</strong> comprueba las condiciones aplicables antes de comprar.</li>
+        </ol>
+      </section>
+
+      <section class="conclusion">
+        <h2>Conclusión: empieza por lo que necesitas</h2>
+
+        <p>
+          No hace falta llenar el escritorio de accesorios para estudiar
+          o trabajar mejor. Una lámpara, unos auriculares, un hub USB
+          o un organizador pueden ser útiles dependiendo de tu situación.
+        </p>
+
+        <p>
+          Empieza por resolver un problema concreto, compara las opciones
+          y compra solo si el producto merece la pena para ti.
+        </p>
+
+        <a href="index.html">Descubre más guías en Empieza Fácil →</a>
+      </section>
+
+    </article>
+
+    <p class="disclosure">
+      Como asociado de Amazon, obtengo ingresos por las compras
+      adscritas que cumplen los requisitos aplicables.
+      Esto no supone un coste adicional para el comprador.
+    </p>
+
+  </main>
+
+  <footer class="wrap footer">
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="contacto.html">Contacto</a>
+    <span>© 2026 Empieza Fácil</span>
+  </footer>
+
 </body>
 </html>
